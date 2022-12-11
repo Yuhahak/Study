@@ -1,0 +1,36 @@
+1. 공유 환경설정을 이용한 데이터 저장과 불러오기
+ ㄴ XML 형태 저장
+  데이터를 키-값 쌍으로 저장하고 다시 불러와 복원할 수 있는 방법
+  저장한 데이터는 사용자 앱이 종료되어도 유지됨
+  활용 : 화면 전환 시 데이터 저장 및 로드를 위한 임시 저장에 활용
+
+  ㄴ 불러오기
+putString getString
+
+2. Editor 함수 : commit : 값을 저장 결과 반환 , apply : 값을 저장
+                  remove : 지정한 키로 삭제 clear : 모두 삭제
+
+3. 내장 메모리의 저장 위치 : /data/data/패키지명/files
+-> 권한 설정 필요
+
+4. raw 폴더 접근 : 프로젝트의 /res/raw 폴더에 필요한 파일을 저장해서 사용 (읽기전용)
+- openRawResource() 메소드를 사용해서 접근 
+
+5. 외장 메모리에 파일을 저장하기 위한 퍼미션
+AndroidManifest.xml 파일에 퍼미션 지정
+ActivityCompat.requestPermissions
+
+6. 커스텀 뷰 만들기 정리
+1) 새로운 클래스를 만들고 뷰를 상속받는다
+public class myPictureView extends View
+
+2) onDraw()메소드 내에 출력할 코드를 작성한다.
+protected void onDraw(Canvas canvas) {
+super.onDraw(canvas);}
+
+3) 새로 만든 뷰를 메인 액티비티에 추가한다
+
+7. 캔버스 : 도화지 같은 개념으로 뷰에 그릴 수 있도록 지원
+   페인트 : 붓 같은 개념으로 그리기에 필욯나 색상 등을 지원
+
+8. 터치 이벤트 : 뷰를 터치하면 발생 onTouchEcvent() 메소드 오버라이딩

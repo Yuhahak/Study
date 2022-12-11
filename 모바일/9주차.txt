@@ -1,0 +1,25 @@
+9주차
+
+1. 옵션 = 키패드 메뉴 버튼, 메뉴아이콘
+   컨텍스트 메뉴 = 롱클릭
+
+2. 옵션 메뉴 생성을 위한 3가지 설정
+   ㄴ onCreateOptionMenu() : 앱이 실행되면 자동으로 수행
+   ㄴ 인플레이터 : 지정한 menu XML로 부터 메뉴 객체 생성
+   ㄴ onOptionsItemSelected() : 메뉴를 선택했을 때의 동작설정
+
+3. Java 코드만 이용한 옵션메뉴
+onCreateOptionsMenu() -> menu.add() 메소드 사용 .addSubmenu()
+onOptionsItemSelected() 안에 변경
+
+4. 인플레이터 : getMenuInflater();
+
+5. 컨텍스트 메뉴 설정 순서 : onCreateContextMenu() 사용
+   ex) if( v == 위젯1) {
+	mInflater.inflate(R.menu.첫번째메뉴아이디, menu);
+
+6. 토스트 표시 위치 변경 setGravity(위치 , x옵셋, y옵셋)
+    ex) toast.setGravity(Gravity.CENTER, 0, 0);
+
+7. 대화상자를 모달처럼 하려면
+    dlg.setCancelable(false);

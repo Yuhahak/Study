@@ -1,0 +1,20 @@
+1. MediaPlayer로 음악 재생하는 방법 2가지
+- create(), start() ,,, reset()
+- 생성자(), setDataSource(), prepare(), start() ,,, reset()
+
+2. 스레드란 ?
+멀티 스레드
+- 여러 작업을 동시에 수행하기 위해 사용되는 개념
+- 스레드는 프로세스 안에서 동작하는 작은 단위
+
+3. Handler, sendMessage(), handelMessage(), looper 란?
+Handler - 스레드와 메시지를 주고받아 통신하기 위함
+sendMessage() - 메세지큐에 메시지를 넣음
+handleMessage() - 메시지를 처리함, 코드는 메인 스레드에서 수행함
+looper - 메세지큐의 메시지를 꺼내 handler에게 전달
+
+updateUI
+4. UI 스레드 사용 시 기본 구조
+- UI 스레드는 화면의 위젯을 변경할 떄 사용
+- 화면의 다른 위젯을 변경할 수 없음
+1235
