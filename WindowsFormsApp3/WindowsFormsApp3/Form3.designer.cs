@@ -32,16 +32,10 @@ namespace WindowsFormsApp1
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.메뉴명 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.단가 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.수량 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.금액 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.비고 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.button_cham = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -71,8 +65,12 @@ namespace WindowsFormsApp1
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button24 = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.메뉴 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.수량 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.금액 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.비고 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,57 +100,6 @@ namespace WindowsFormsApp1
             this.button1.Text = "닫기";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.메뉴명,
-            this.단가,
-            this.수량,
-            this.금액,
-            this.비고});
-            this.dataGridView1.Location = new System.Drawing.Point(13, 73);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(574, 280);
-            this.dataGridView1.TabIndex = 3;
-            // 
-            // 메뉴명
-            // 
-            this.메뉴명.HeaderText = "메뉴명";
-            this.메뉴명.Name = "메뉴명";
-            this.메뉴명.ReadOnly = true;
-            this.메뉴명.Width = 150;
-            // 
-            // 단가
-            // 
-            this.단가.HeaderText = "단가";
-            this.단가.Name = "단가";
-            this.단가.ReadOnly = true;
-            // 
-            // 수량
-            // 
-            this.수량.HeaderText = "수량";
-            this.수량.Name = "수량";
-            this.수량.ReadOnly = true;
-            this.수량.Width = 75;
-            // 
-            // 금액
-            // 
-            this.금액.HeaderText = "금액";
-            this.금액.Name = "금액";
-            this.금액.ReadOnly = true;
-            this.금액.Width = 150;
-            // 
-            // 비고
-            // 
-            this.비고.HeaderText = "비고";
-            this.비고.Name = "비고";
-            this.비고.ReadOnly = true;
-            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(593, 74);
@@ -181,14 +128,15 @@ namespace WindowsFormsApp1
             this.button4.Text = "주류";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // button_cham
             // 
-            this.button5.Location = new System.Drawing.Point(593, 161);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(66, 60);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "참이슬";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button_cham.Location = new System.Drawing.Point(593, 161);
+            this.button_cham.Name = "button_cham";
+            this.button_cham.Size = new System.Drawing.Size(66, 60);
+            this.button_cham.TabIndex = 5;
+            this.button_cham.Text = "참이슬";
+            this.button_cham.UseVisualStyleBackColor = true;
+            this.button_cham.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -463,11 +411,47 @@ namespace WindowsFormsApp1
             this.button24.Text = "결제";
             this.button24.UseVisualStyleBackColor = false;
             // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.메뉴,
+            this.수량,
+            this.금액,
+            this.비고});
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(13, 74);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(560, 279);
+            this.listView1.TabIndex = 7;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // 메뉴
+            // 
+            this.메뉴.Text = "메뉴";
+            this.메뉴.Width = 230;
+            // 
+            // 수량
+            // 
+            this.수량.Text = "수량";
+            this.수량.Width = 110;
+            // 
+            // 금액
+            // 
+            this.금액.Text = "금액";
+            this.금액.Width = 130;
+            // 
+            // 비고
+            // 
+            this.비고.Text = "비고";
+            this.비고.Width = 80;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(955, 697);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button14);
@@ -488,19 +472,17 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button_cham);
             this.Controls.Add(this.button24);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form3";
             this.Text = "Form3";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -511,16 +493,10 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 메뉴명;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 단가;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 수량;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 금액;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 비고;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button_cham;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
@@ -550,5 +526,10 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button24;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader 메뉴;
+        private System.Windows.Forms.ColumnHeader 수량;
+        private System.Windows.Forms.ColumnHeader 금액;
+        private System.Windows.Forms.ColumnHeader 비고;
     }
 }
