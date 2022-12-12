@@ -36,7 +36,7 @@ namespace WindowsFormsApp1
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button_cham = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.button_fresh = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
@@ -55,13 +55,9 @@ namespace WindowsFormsApp1
             this.button22 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button24 = new System.Windows.Forms.Button();
@@ -70,6 +66,8 @@ namespace WindowsFormsApp1
             this.수량 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.금액 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.비고 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.textBox_sumnumber = new System.Windows.Forms.TextBox();
+            this.textBox_sumcash = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -138,14 +136,15 @@ namespace WindowsFormsApp1
             this.button_cham.UseVisualStyleBackColor = true;
             this.button_cham.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button6
+            // button_fresh
             // 
-            this.button6.Location = new System.Drawing.Point(665, 161);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(66, 60);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "참이슬  후레쉬";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button_fresh.Location = new System.Drawing.Point(665, 161);
+            this.button_fresh.Name = "button_fresh";
+            this.button_fresh.Size = new System.Drawing.Size(66, 60);
+            this.button_fresh.TabIndex = 5;
+            this.button_fresh.Text = "참이슬  후레쉬";
+            this.button_fresh.UseVisualStyleBackColor = true;
+            this.button_fresh.Click += new System.EventHandler(this.button_fresh_Click);
             // 
             // button7
             // 
@@ -305,13 +304,11 @@ namespace WindowsFormsApp1
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.textBox_sumcash);
+            this.groupBox2.Controls.Add(this.textBox_sumnumber);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Location = new System.Drawing.Point(13, 425);
             this.groupBox2.Name = "groupBox2";
@@ -319,15 +316,6 @@ namespace WindowsFormsApp1
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
-            // 
-            // label8
-            // 
-            this.label8.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label8.Location = new System.Drawing.Point(124, 214);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 20);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "4,000\\";
             // 
             // label7
             // 
@@ -338,15 +326,6 @@ namespace WindowsFormsApp1
             this.label7.TabIndex = 0;
             this.label7.Text = "총 금액";
             // 
-            // label6
-            // 
-            this.label6.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label6.Location = new System.Drawing.Point(124, 126);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 20);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "4,000\\";
-            // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -356,15 +335,6 @@ namespace WindowsFormsApp1
             this.label5.TabIndex = 0;
             this.label5.Text = "받음 금액";
             // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(124, 82);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 18);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "4,000\\";
-            // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -373,15 +343,6 @@ namespace WindowsFormsApp1
             this.label3.Size = new System.Drawing.Size(77, 18);
             this.label3.TabIndex = 0;
             this.label3.Text = "받을 금액";
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(124, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 18);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "8,000\\";
             // 
             // label1
             // 
@@ -446,6 +407,20 @@ namespace WindowsFormsApp1
             this.비고.Text = "비고";
             this.비고.Width = 80;
             // 
+            // textBox_sumnumber
+            // 
+            this.textBox_sumnumber.Location = new System.Drawing.Point(91, 55);
+            this.textBox_sumnumber.Name = "textBox_sumnumber";
+            this.textBox_sumnumber.Size = new System.Drawing.Size(100, 21);
+            this.textBox_sumnumber.TabIndex = 1;
+            // 
+            // textBox_sumcash
+            // 
+            this.textBox_sumcash.Location = new System.Drawing.Point(91, 173);
+            this.textBox_sumcash.Name = "textBox_sumcash";
+            this.textBox_sumcash.Size = new System.Drawing.Size(100, 21);
+            this.textBox_sumcash.TabIndex = 2;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -471,7 +446,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.button15);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button10);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button_fresh);
             this.Controls.Add(this.button_cham);
             this.Controls.Add(this.button24);
             this.Controls.Add(this.button4);
@@ -484,6 +459,7 @@ namespace WindowsFormsApp1
             this.Text = "Form3";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -497,7 +473,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button_cham;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button_fresh;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
@@ -516,13 +492,9 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Button button23;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button24;
@@ -531,5 +503,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ColumnHeader 수량;
         private System.Windows.Forms.ColumnHeader 금액;
         private System.Windows.Forms.ColumnHeader 비고;
+        private System.Windows.Forms.TextBox textBox_sumcash;
+        private System.Windows.Forms.TextBox textBox_sumnumber;
     }
 }

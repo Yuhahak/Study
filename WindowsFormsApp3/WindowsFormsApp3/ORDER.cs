@@ -21,6 +21,10 @@ namespace WindowsFormsApp3
         {
             get; set;
         }
+        public int sumcash
+        {
+            get; set;
+        }
 
         public int porkcount
         {
@@ -79,6 +83,16 @@ namespace WindowsFormsApp3
             return chickensum;
         }
 
+        public int SumNumber()
+        {
+            sumnumber = porkcount + beefcount + chickencount;
+            return sumnumber - 10;
+        }
+        public int SumCash()
+        {
+            sumcash = porksum + beefsum + chickensum;
+            return sumcash;
+        }
     }
 
     
