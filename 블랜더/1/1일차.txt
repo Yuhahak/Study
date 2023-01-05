@@ -1,0 +1,26 @@
+https://www.youtube.com/watch?v=7FPaJpwzdjU&list=PLqf2JB4ViQO4dXIJykSyCM-k5a50eJC_P
+블렌더 1강
+
+Move키 : g
+rotation키 : r
+scale키: s
+복사 : 쉬프트 + d
+커서 위치 조절 : 쉬프트 + 오른쪽 클릭
+작은 화살표 키: n
+
+
+물체 색깔 : 상단의 shading 버튼
+shading - 오른쪽 메뉴 - Render Properties : Eevee 평범, Cycles 현식적인 렌더링
+
+빛의 세기,색깔 : 빛 - 오른쪽 메뉴 - 전등모양
+
+카메라뷰 : 카메라 우클릭 - 카메라고정 오른쪽메뉴 작은 화살표 - Lock Camera to View
+
+물체조절 : 물체의 점,면,모서리로 조절 - 왼쪽위에 object모드를 edit모드로 변경
+
+----------------------------------
+* edit mode :
+
+Loop Cut : 컨트롤+r : 물체자르기
+
+맞물리지 않는부분 점과점 눌러서 키보드 m 으로 merge시키기 (강좌3_17분)
